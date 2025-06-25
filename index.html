@@ -26,49 +26,20 @@
       height: var(--badge-height);
       background: url('badge-background.png') no-repeat center/cover;
       border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
       display: flex;
-      justify-content: center;      /* horizontal centering of content */
-      align-items: center;          /* vertical centering of content */
+      justify-content: center;
+      align-items: center;
       box-sizing: border-box;
       color: white;
       position: relative;
-      overflow: hidden;
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 1rem;
-    }
-
-    .profile-pic {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: url('profile.jpg') no-repeat center/cover;
-      border: 3px solid white;
-      margin-bottom: 1rem;
-    }
-
-    .name {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .about {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      padding: 0 0.5rem;
     }
 
     .links {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      text-align: center;
     }
 
     .links a {
@@ -94,15 +65,10 @@
 </head>
 <body>
   <div class="badge">
-    <div class="content">
-      <div class="profile-pic"></div>
-      <div class="name">Nesa</div>
-      <div class="about"></div>
-      <div class="links">
-        <a href="https://link1.example" target="_blank">Portfolio</a>
-        <a href="https://link2.example" target="_blank">Twitter</a>
-        <a href="https://link3.example" target="_blank">Contact</a>
-      </div>
+    <div class="links">
+      <a href="https://link1.example" target="_blank">Portfolio</a>
+      <a href="https://link2.example" target="_blank">Twitter</a>
+      <a href="https://link3.example" target="_blank">Contact</a>
     </div>
   </div>
 </body>
