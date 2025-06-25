@@ -31,7 +31,6 @@
       justify-content: center;
       align-items: center;
       box-sizing: border-box;
-      color: white;
       position: relative;
     }
 
@@ -39,20 +38,17 @@
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
+      align-items: center;
       text-align: center;
     }
 
-    .links a {
-      background: #ff007f;
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s;
+    .links a img {
+      width: 200px; /* Adjust as needed for design */
+      transition: transform 0.2s ease;
     }
 
-    .links a:hover {
-      background: #e60072;
+    .links a img:hover {
+      transform: scale(1.05);
     }
 
     @media (max-width: 400px) {
@@ -60,15 +56,25 @@
         --badge-width: 90vw;
         --badge-height: calc(90vw * 1.43);
       }
+
+      .links a img {
+        width: 70%;
+      }
     }
   </style>
 </head>
 <body>
   <div class="badge">
     <div class="links">
-      <a href:"" target="_blank">Telegram</a>
-      <a href="https://discord.gg/fR2CKvan6S" target="_blank">Discord Server</a>
-      <a>Telegram @NesaFirecastr</a>
+      <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
+        <img src="STEAM.png" alt="Steam Button">
+      </a>
+      <a href="https://discord.gg/fR2CKvan6S" target="_blank">
+        <img src="DISCORD.png" alt="Discord Server Button">
+      </a>
+      <a href="#">
+        <img src="TELEGRAM.png" alt="Telegram @NesaFirecastr">
+      </a>
     </div>
   </div>
 </body>
