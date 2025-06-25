@@ -48,6 +48,28 @@
       width: 100%;
     }
 
+    .back-button {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 48px;
+      height: 48px;
+      background-color: #444;
+      color: white;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: background 0.2s ease;
+      z-index: 10;
+    }
+
+    .back-button:hover {
+      background-color: #666;
+    }
+
     @media (max-width: 400px) {
       :root {
         --badge-width: 90vw;
@@ -63,11 +85,18 @@
         width: 90%;
         height: auto;
       }
+
+      .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 
 <body>
+  <a href="index.html" class="back-button">&#8592;</a>
   <div class="badge">
     <div class="content">
     </div>
