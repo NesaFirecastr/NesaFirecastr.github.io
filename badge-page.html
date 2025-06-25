@@ -26,90 +26,64 @@
       color: white;
     }
 
-    .badge {
-      width: var(--badge-width);
-      height: var(--badge-height);
-      background: url('badge-background.png') no-repeat center/cover;
-      border-radius: 1rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .back-button {
+      width: 50px;
+      height: 50px;
+      background-color: #444;
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      transition: background 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #666;
+    }
+
+    .badge {
+      width: var(--badge-width);
+      height: var(--badge-height);
+      background: url('AC2025_BADGE_NFC.PNG') no-repeat center/cover;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
       position: relative;
       overflow: hidden;
     }
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-    }
-
-    .top-box {
-      margin-top: 60px;
-      width: 294px;
-      height: 107px;
-      background: url('ABOUTBKG.png') no-repeat center/cover;
-    }
-
-    .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .links a img {
-      width: 300px;
-      height: 50px;
-      object-fit: contain;
-      transition: transform 0.2s ease;
-    }
-
-    .links a img:hover {
-      transform: scale(1.05);
-    }
-
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       :root {
         --badge-width: 90vw;
         --badge-height: calc(90vw * 1.43);
       }
 
-      .top-box {
-        width: 90%;
-        height: 80px;
+      .container {
+        flex-direction: column;
       }
 
-      .links a img {
-        width: 90%;
-        height: auto;
+      .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="badge">
-    <div class="content">
-      <div class="top-box"></div>
+  <div class="container">
+    <!-- Placeholder back button -->
+    <a href="index.html" class="back-button">&#8592;</a>
 
-      <div class="links">
-        <a href="https://discord.gg/fR2CKvan6S" target="_blank">
-          <img src="DISCORD.png" alt="Discord">
-        </a>
-        <a href="https://vrchat.com/home/user/usr_yourvrchatid" target="_blank">
-          <img src="VRCHAT.png" alt="VRChat">
-        </a>
-        <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
-          <img src="STEAM.png" alt="Steam">
-        </a>
-        <!-- Optional: add a "back" button -->
-        <a href="index.html">
-          <img src="BACK.png" alt="Back to Main Page">
-        </a>
-      </div>
-    </div>
+    <div class="badge"></div>
   </div>
 </body>
 </html>
