@@ -27,29 +27,25 @@
       background: url('badge-background.png') no-repeat center/cover;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: relative;
       overflow: hidden;
     }
 
-    .content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      width: 100%;
-    }
-
-    .top-box {
-      width: 300px;
+    .about-box {
+      position: absolute;
+      top: 108px;
+      left: 28px;
+      width: 294px; /* approx 3in wide */
       height: 100px;
       background: url('ABOUTBKG.png') no-repeat center/cover;
       border-radius: 12px;
     }
 
     .links {
+      position: absolute;
+      top: 220px; /* Start button stack just below About box */
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
@@ -74,9 +70,16 @@
         --badge-height: calc(90vw * 1.43);
       }
 
-      .top-box {
-        width: 90%;
+      .about-box {
+        width: 80%;
         height: 80px;
+        left: 10%;
+        top: 22%;
+      }
+
+      .links {
+        top: 50%;
+        transform: translateX(-50%);
       }
 
       .links a img {
@@ -88,23 +91,21 @@
 </head>
 <body>
   <div class="badge">
-    <div class="content">
-      <div class="top-box"></div>
+    <div class="about-box"></div>
 
-      <div class="links">
-        <a href="https://discord.gg/fR2CKvan6S" target="_blank">
-          <img src="DISCORD.png" alt="Discord">
-        </a>
-        <a href="https://vrchat.com/home/user/usr_yourvrchatid" target="_blank">
-          <img src="VRCHAT.png" alt="VRChat">
-        </a>
-        <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
-          <img src="STEAM.png" alt="Steam">
-        </a>
-        <a href="" target="_blank">
-          <img src="BADGE.png" alt="My AC Badge">
-        </a>
-      </div>
+    <div class="links">
+      <a href="https://discord.gg/fR2CKvan6S" target="_blank">
+        <img src="DISCORD.png" alt="Discord">
+      </a>
+      <a href="https://vrchat.com/home/user/usr_yourvrchatid" target="_blank">
+        <img src="VRCHAT.png" alt="VRChat">
+      </a>
+      <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
+        <img src="STEAM.png" alt="Steam">
+      </a>
+      <a href="ac-badge.png" target="_blank">
+        <img src="MYACBADGE.png" alt="My AC Badge">
+      </a>
     </div>
   </div>
 </body>
