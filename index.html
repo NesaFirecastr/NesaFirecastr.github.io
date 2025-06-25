@@ -28,12 +28,22 @@
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
+      justify-content: center;      /* horizontal centering of content */
+      align-items: center;          /* vertical centering of content */
       box-sizing: border-box;
       color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.4); /* optional: adds slight contrast */
+      border-radius: 1rem;
     }
 
     .profile-pic {
@@ -54,6 +64,7 @@
     .about {
       font-size: 0.9rem;
       margin-bottom: 1rem;
+      padding: 0 0.5rem;
     }
 
     .links {
@@ -66,7 +77,7 @@
       background: #ff007f;
       color: white;
       text-decoration: none;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
       transition: background 0.3s;
     }
@@ -85,15 +96,15 @@
 </head>
 <body>
   <div class="badge">
-    <div class="profile-pic"></div>
-    <div class="name">Nesa</div>
-    <div class="about">
-      Voidchild | Cosmic Realist | Design Goblin  
-    </div>
-    <div class="links">
-      <a href="https://link1.example" target="_blank">Portfolio</a>
-      <a href="https://link2.example" target="_blank">Twitter</a>
-      <a href="https://link3.example" target="_blank">Contact</a>
+    <div class="content">
+      <div class="profile-pic"></div>
+      <div class="name">Nesa</div>
+      <div class="about">Voidchild | Cosmic Realist | Design Goblin</div>
+      <div class="links">
+        <a href="https://link1.example" target="_blank">Portfolio</a>
+        <a href="https://link2.example" target="_blank">Twitter</a>
+        <a href="https://link3.example" target="_blank">Contact</a>
+      </div>
     </div>
   </div>
 </body>
