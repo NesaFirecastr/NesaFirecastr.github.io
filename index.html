@@ -83,6 +83,40 @@
         height: auto;
       }
     }
+    .full-badge-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.full-badge {
+  width: var(--badge-width);
+  height: var(--badge-height);
+  background: url('AC2025_BADGE_NFC.PNG') no-repeat center/cover;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.back-top {
+  font-size: 1rem;
+  color: #ff69b4;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.back-top:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 400px) {
+  .full-badge {
+    width: 90vw;
+    height: calc(90vw * 1.43);
+  }
+}
+
   </style>
 </head>
 <body>
@@ -100,12 +134,15 @@
         <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
           <img src="STEAM.png" alt="Steam">
         </a>
-        <a href="badge.html">
+        <a href="#fullbadge">
   <img src="BADGE.png" alt="My AC Badge">
 </a>
-        </a>
       </div>
     </div>
   </div>
+  <div id="fullbadge" class="full-badge-section">
+  <div class="full-badge"></div>
+  <a href="#" class="back-top">← Back to Top</a>
+</div>
 </body>
 </html>
