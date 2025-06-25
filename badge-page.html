@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NesaFirecastr | AC Badge Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --badge-width: 350px;
+      --badge-height: 500px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .back-button {
+      width: 50px;
+      height: 50px;
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5rem;
+      transition: background 0.2s ease;
+    }
+
+    .back-button:hover {
+      background-color: #666;
+    }
+
+    .badge {
+      width: var(--badge-width);
+      height: var(--badge-height);
+      background: url('NFCF.PNG') no-repeat center/cover;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (max-width: 500px) {
+      :root {
+        --badge-width: 90vw;
+        --badge-height: calc(90vw * 1.43);
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .back-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Placeholder back button -->
+    <a href="index.html" class="back-button">&#8592;</a>
+
+    <div class="badge"></div>
+  </div>
+</body>
+</html>
