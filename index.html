@@ -27,39 +27,45 @@
       background: url('badge-background.png') no-repeat center/cover;
       border-radius: 1rem;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: relative;
       overflow: hidden;
     }
 
-    .about-box {
-      position: absolute;
-      top: 108px;
-      left: 28px;
-      width: 300px;
-      height: 140px;
-      background: url('ABOUTBKG.png') no-repeat center/cover;
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
     }
 
-    .button {
-      position: flex;
-      left: 50%;
-      transform: translateX(-50%);
+    .top-box {
+	margin-top: 60px;
+    width: 294px;
+    height: 107px;
+    background: url('ABOUTBKG.png') no-repeat center/cover;
+    border-radius: 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links a img {
       width: 300px;
-      height: 60px;
+      height: 50px;
       object-fit: contain;
-      border-radius: 12px;
       transition: transform 0.2s ease;
     }
 
-    .button:hover {
-      transform: translateX(-50%) scale(1.05);
+    .links a img:hover {
+      transform: scale(1.05);
     }
-
-    /* Button vertical positions */
-    .btn1 { top: 153px; }
-    .btn2 { top: 230px; }
-    .btn3 { top: 307px; }
-    .btn4 { top: 384px; }
 
     @media (max-width: 400px) {
       :root {
@@ -67,14 +73,12 @@
         --badge-height: calc(90vw * 1.43);
       }
 
-      .about-box {
-        width: 80%;
+      .top-box {
+        width: 90%;
         height: 80px;
-        left: 10%;
-        top: 22%;
       }
 
-      .button {
+      .links a img {
         width: 90%;
         height: auto;
       }
@@ -83,20 +87,24 @@
 </head>
 <body>
   <div class="badge">
-    <div class="about-box"></div>
+    <div class="content">
+      <div class="top-box"></div>
 
-    <a href="https://discord.gg/fR2CKvan6S" target="_blank">
-      <img src="DISCORD.png" alt="Discord" class="button btn1">
-    </a>
-    <a href="https://vrchat.com/home/user/usr_yourvrchatid" target="_blank">
-      <img src="VRCHAT.png" alt="VRChat" class="button btn2">
-    </a>
-    <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
-      <img src="STEAM.png" alt="Steam" class="button btn3">
-    </a>
-    <a href="ac-badge.png" target="_blank">
-      <img src="MYACBADGE.png" alt="My AC Badge" class="button btn4">
-    </a>
+      <div class="links">
+        <a href="https://discord.gg/fR2CKvan6S" target="_blank">
+          <img src="DISCORD.png" alt="Discord">
+        </a>
+        <a href="https://vrchat.com/home/user/usr_yourvrchatid" target="_blank">
+          <img src="VRCHAT.png" alt="VRChat">
+        </a>
+        <a href="https://steamcommunity.com/id/Nesafirecastr" target="_blank">
+          <img src="STEAM.png" alt="Steam">
+        </a>
+        <a href="" target="_blank">
+          <img src="BADGE.png" alt="My AC Badge">
+        </a>
+      </div>
+    </div>
   </div>
 </body>
 </html>
